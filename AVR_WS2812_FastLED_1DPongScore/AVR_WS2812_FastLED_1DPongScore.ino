@@ -1,9 +1,6 @@
 #include "FastLED.h"
 #include "Button.h"
 
-// TODO: punten bijhouden
-// TODO: button class eruit
-
 #define BUTTON_A     1
 #define BUTTON_B     2
 #define BUTTON_RESET 3
