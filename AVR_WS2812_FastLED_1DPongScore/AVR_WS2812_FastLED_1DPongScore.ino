@@ -276,5 +276,5 @@ void loop() {
   b_reset.checkStatus();
 
   FastLED.show();
-  FastLED.delay(4);
+  FastLED.delay(2);
 }
