@@ -7,9 +7,13 @@
 #define BUTTON_B     2
 #define BUTTON_RESET 3
 
-Button b1(BUTTON_A, 2, 'A');
-Button b2(BUTTON_B, 3, 'B');
-Button b_reset(BUTTON_RESET, 4, 'R');
+#define BUTTON_A_PIN     2
+#define BUTTON_B_PIN     3
+#define BUTTON_RESET_PIN 4
+
+Button b1(BUTTON_A, BUTTON_A_PIN, 'A');
+Button b2(BUTTON_B, BUTTON_B_PIN, 'B');
+Button b_reset(BUTTON_RESET, BUTTON_RESET_PIN, 'R');
 
 // How many leds in your strip?
 #define NUMLEDPIXELS  30 // 30, 60
@@ -55,6 +59,17 @@ void setup() {
   Serial.println("1D Pong + Score setup started");
   FastLED.addLeds<NEOPIXEL, WS2812B_PIN>(leds, NUMLEDPIXELS);
   // FastLED.setDither( 0 );
+
+  Serial.print("Pin LED strip: ");
+  Serial.println(WS2812B_PIN);
+  Serial.print("Number of LEDs: ");
+  Serial.println(NUMLEDPIXELS);
+  Serial.print("Pin Button A: ");
+  Serial.println(BUTTON_A_PIN);
+  Serial.print("Pin Button B: ");
+  Serial.println(BUTTON_B_PIN);
+  Serial.print("Pin Button Reset: ");
+  Serial.println(BUTTON_RESET_PIN);
 }
 
 void show_score()
