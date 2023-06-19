@@ -1,8 +1,6 @@
 #include "FastLED.h"
 #include "Button.h"
 
-// TODO: button class eruit
-
 #define BUTTON_A     1
 #define BUTTON_B     2
 #define BUTTON_RESET 3
@@ -80,11 +78,11 @@ void show_score()
   Serial.println(score2);
   fill_solid (leds, NUMLEDPIXELS, CRGB(0, 0, 0));
 
-  for (int count = 0; count < score1; ++count)
+  for (int count = 0; count < MAX_SCORE-score2; ++count)
   {
     leds[count] = CRGB(0, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
   }
-  for (int count = 0; count < score2; ++count)
+  for (int count = 0; count < MAX_SCORE-score1; ++count)
   {
     leds[NUMLEDPIXELS - count - 1] = CRGB(0, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
   }
@@ -96,8 +94,6 @@ void show_winner(int w)
 {
   Serial.println("end run");
   fill_solid (leds, NUMLEDPIXELS, CRGB(0, 0, 0));
-
-  // TODO verkorten
 
   if (w == 0)
   {
