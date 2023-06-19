@@ -142,6 +142,8 @@ void updateState()
     case STATE_MOVEUP:
       if (millis() > next_tick)
       {
+        leds[NUM_LED_CLICK-1] = CRGB(LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
+        leds[NUMLEDPIXELS - NUM_LED_CLICK] = CRGB(LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
         for (int count = 0; count < NUMLEDPIXELS; ++count)
         {
           leds[count] /= 2;
@@ -167,6 +169,8 @@ void updateState()
     case STATE_MOVEDOWN:
       if (millis() > next_tick)
       {
+        leds[NUM_LED_CLICK-1] = CRGB(LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
+        leds[NUMLEDPIXELS - NUM_LED_CLICK] = CRGB(LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX, LED_BRIGHTNESS_FIX);
         for (int count = 0; count < NUMLEDPIXELS; ++count)
         {
           leds[count] /= 2;
