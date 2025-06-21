@@ -218,6 +218,7 @@ void updateState()
         next_tick = millis() + TIME_ENDRUN;
         show_score();
       }
+      break;
 
     case STATE_ENDRUN:
       if (millis() > next_tick)
