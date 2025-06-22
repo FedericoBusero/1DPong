@@ -14,8 +14,8 @@ Button b2(BUTTON_B, BUTTON_B_PIN, 'B');
 Button b_reset(BUTTON_RESET, BUTTON_RESET_PIN, 'R');
 
 // How many leds in your strip?
-#define NUMLEDPIXELS  30 // 30, 60
-#define NUM_LED_CLICK  7 // 7, 13
+#define NUMLEDPIXELS  60 // 30, 60
+#define NUM_LED_CLICK  13 // Number of leds in the click zone. Use e.g. 7 for a 30 leds strip or 13 for a 60 leds strip
 
 #define WS2812B_PIN 5
 
